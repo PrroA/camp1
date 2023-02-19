@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(../img/bott.jpg);
+    background-color: #fff;
     /* overflow: hidden; */
 }
 
@@ -123,7 +123,7 @@ nav li:hover {
     overflow-y: hidden;
     max-height: 0;
     transition: max-height 1s;
-    color: red;
+    color: rgb(159, 114, 114);
 }
 
 .question input:checked~.a-content {
