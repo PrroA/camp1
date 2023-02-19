@@ -5,7 +5,7 @@
     }
 
     body {
-        background-color: #fff; 
+        background-color: #fff;
     }
 
     /* 最上方的導覽列 */
@@ -13,7 +13,7 @@
     .top {
         width: 100%;
         margin: 0 auto;
-        background-color: rgb(255, 255, 255); 
+        background-color: rgb(255, 255, 255);
         justify-content: center;
         align-items: center;
         display: flex;
@@ -96,10 +96,6 @@
 
 
 
-    main .info {
-        background-image: url(/img/Index/ICON_BG.jpg);
-        background-color: #edead8;
-    }
 
     main .info h3 {
         text-shadow: 0.1em 0.1em 0.2em rgb(144, 218, 94);
