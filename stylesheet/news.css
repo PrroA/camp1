@@ -252,6 +252,7 @@ footer {
     z-index: 9999;
 }
 
+
 #status {
     /*   這是中間loading的gif坐標css,我們盡量讓他畫面置中  */
     position: fixed;
@@ -260,6 +261,14 @@ footer {
     left: 50%;
     top: 50%;
 }
+
+.sticker {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
 
 
 @media screen and (max-width: 414px) {
@@ -378,13 +387,14 @@ footer {
         text-align: center;
     }
 
-    #status {
-        /*   這是中間loading的gif坐標css,我們盡量讓他畫面置中  */
-        position: fixed;
-        width: 218px;
-        height: 419px;
-        /* left: 50%;
-        top: 50%; */
+    .sticker {
+        width: 100%;
+        /* margin-right: 500px; */
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        transform: translate(-100%, -100%);
     }
-    
+
+
 }

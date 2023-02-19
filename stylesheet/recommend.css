@@ -253,6 +253,7 @@ nav li:hover {
 
       #container {
         margin: 54px 0 0 0 ;
+        padding: 10px;
       }
 
       #container > div > img {
@@ -266,6 +267,9 @@ nav li:hover {
       #container > div:nth-child(3n + 1) .title {
         text-align: center;
       }
+
+      .aos-init.aos-animate { 
+        padding:10px }
 
 
 
