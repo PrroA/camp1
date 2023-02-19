@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/qa.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./jq/jquery-3.6.3.js" ></script>
+</head>
+
+<body>
+    <nav class="top">
+        <i class="fa fa-bars " aria-hidden="true"  id="abc" onclick="openMenu()"></i>
+        <a href="/index.html">
+            <img src="./img/Index/Component 1.png" alt=""></a>
+        <ul class="flex-nav menu">
+            <li><a href="./page1.html">帳篷目錄</a></li>
+            <li><a href="./recommend.html">一日推薦</a></li>
+            <li><a href="./menu.html">商品租借</a></li>
+            <li><a href="./qa.html">常見問題</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./order.html">線上預約</a></li>
+        </ul>
+    </nav>
+    <div id="content-container">n>入營時間，禁吃檳榔 禁抽菸 禁吸毒不良物品<br>
+                    晚上10點後 禁大聲喧嘩，不打擾其他用
+        <img src="./img/istockphoto-1357394932-612x612-removebg-preview (2).png" alt="" id="banner">
+    </div>
+    <div id="qa-container">
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>何時CHECK IN <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><span>當日預約的下午2:00&lt;即可入住</span></div>
+        </label>
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>隔天是否有早餐 <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><span>無，早餐自行準備園區為提供</span></div>
+        </label>
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>可否提早入住 <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><span>不行，因入住前都是上一位房客留下的清潔時間</span></div>
+        </label>
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>停車可否兩台以上? <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><span>可以，租借一個板篷位可以停台車</span></div>
+        </label>
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>露營宣導 <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><spa戶休息<br>
+                    謝謝您的配合</span></div>
+        </label>
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>平日與假日定義 <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><span>禮拜日~禮拜四皆是平日，其餘都是假日<br>
+                ((包括國定假日以及年假))</span></div>
+        </label>
+        <label class="question">
+            <input type="checkbox">
+            <div class="q-content"><span>Q</span><span>臨時有事可否延期? <span class="down-arrow">&#9207;</span></span></div>
+            <div class="a-content"><span>A</span><span>入住露營前三天，皆可提前告知，在與雙方溝通改期</span></div>
+        </label>
+    </div>
+
+    <a href="#">
+        <div id="to-top">
+            <img src="./img/up-arrow.png" alt="">
+        </div>
+    </a>
+    <footer>
+        <p>電話: (02)-1234-5678</p>
+        <p>地址:新竹市湖口區三民路樂康街400號</p>
+        <p>Email:ga3005043857@gmail.com</p>
+    </footer>
+    <div class="fin">
+        <p> 本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。參考資源: WILD KIDS LIFE</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.q-content').click(function(){
+                $('a-content').slideToggle(1000)
+            })
+        })
+
+        let open = 0 ;
+            function openMenu(){
+
+            
+        //    console.log(open);
+            if(open == 0){
+                $(".top .menu").css("left", "-47px")
+                open = 1;
+                
+            }else{
+                $(".top .menu").css("left", "-500px")
+                open = 0;
+            } 
+            // console.log(openMenu());
+        }
+    </script>
+</body> 
+
+</html>

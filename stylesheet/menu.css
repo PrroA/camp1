@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/bott.jpg);
+    /* overflow: hidden; */
+}
+
+/* 最上方的導覽列 */
+
+.top {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    border-bottom: 2px solid black;
+    z-index: 10;
+}
+ 
+.top img {
+    margin-top: 20px;
+    height: 50px;
+    padding-bottom: 5px;
+
+}
+
+
+nav ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    /* 移除項目符號 */
+
+
+}
+
+nav a {
+    color: inherit;
+    /* 移除超連結顏色 */
+    display: block;
+    /* 讓 <a> 填滿 <li> */
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+    /* 移除超連結底線 */
+    font-weight: 900;
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav li:hover {
+    background-color: rgb(255, 255, 255);
+    color: #cc5200;
+}
+
+.inline-block-nav {
+    text-align: center;
+    font-size: 0;
+    /* 移除 <li> 之間的空隙 */
+}
+
+.inline-block-nav>li {
+    display: inline-block;
+}
+
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+    display: none;
+}
+
+#content-container {
+    max-width: 65rem;
+    margin: 0 auto;
+
+}
+
+#content-container #banner {
+    width: 100%;
+    height: 410px;
+    margin-top: 100px;
+}
+
+#content {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#sidebar {
+    width: 20rem;
+}
+
+#sidebar ul {
+    list-style: none;
+    box-shadow: 0px 4px 5px -2px #1b211d;
+
+}
+
+#sidebar li {
+    text-align: center;
+    line-height: 2em;
+    border-bottom: 0.5px solid #211B1B;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#sidebar a {
+    text-decoration: none;
+}
+
+#sidebar li:first-child {
+    line-height: 3em;
+    background-color: #ba8282;
+    color: white;
+}
+
+#sidebar li:not(:first-child) {
+    cursor: pointer;
+}
+
+#sidebar li:not(:first-child):hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#products {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+.product {
+    width: 18em;
+    height: 22em;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 100px;
+}
+
+.price {
+    align-self: flex-end;
+    padding-right: 50px;
+    color: red;
+}
+
+.product :last-child {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    margin: 10px;
+}
+
+.product button {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+    transition: all 2s;
+    cursor: pointer;
+    margin: 1px;
+}
+
+.spacing {
+    flex-grow: 1;
+}
+
+#main {
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#more {
+    padding: 3em 0;
+    cursor: pointer;
+}
+
+#to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 0.75em;
+    background-color: #EFD9D9;
+    cursor: pointer;
+}
+
+#to-top img {
+    width: 100%;
+}
+
+.electric img {
+    height: 284px;
+    padding-bottom: 2000px;
+}
+
+.product .electric_btn button {
+    padding: 200px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    margin: 0 auto;
+    display: block;
+    font-size: 2em;
+
+    color: #0099CC;
+    /* 清除背景色 */
+    background: transparent;
+    /* 邊框样式、颜色、宽度 */
+    border: 2px solid #0099CC;
+    /* 给邊框添加圆角 */
+    border-radius: 10px;
+    /* 字母轉大寫 */
+    /* border: none; */
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+
+}
+
+.btn:hover {
+    background-color: #fff0D4;
+    color: white;
+    border-radius: 2rem;
+    transition-duration: 1s;
+    color: black;
+}
+
+
+/* 最後footer 介紹 */
+footer {
+    line-height: 1.6;
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    border-bottom: 2px solid red;
+    margin-top: 20px;
+}
+
+
+.fin {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px;
+}
+
+.fin p {
+    color: aliceblue;
+}
+
+
+
+
+@media screen and (max-width: 414px) {
+    html {
+        width: 100%;
+    }
+
+    body {
+        width: 100%;
+        /* opacity: .5; */
+    }
+
+    .top {
+        width: 414px;
+
+    }
+
+
+    .top nav ul {
+        width: 414px;
+    }
+
+    .top .menu {
+        display: block;
+        position: fixed;
+        left: -500px;
+        top: 94px;
+        width: 100vw;
+        /* height: calc(100vh - 60px); */
+        background-color: #6bcb42;
+        z-index: 10;
+        order: 2;
+        transition: .5s;
+        opacity: .9;
+        border: 1px solid black;
+    }
+
+    .top>.fa:hover~ul {
+        left: -40px;
+        /* border: 1px solid black; */
+    }
+
+    .top .fa .fa-bars {
+        float: left;
+    }
+
+    .top .menu li {
+        margin-right: 0;
+        border: 1px solid black;
+    }
+
+    .top .menu li:last-child {
+        border-bottom: 1px solid #991515;
+    }
+
+    .top .menu a {
+        line-height: 60px;
+        padding-left: 50px;
+    }
+
+    nav a {
+        margin-left: 150px;
+    }
+
+    .fa-navicon:before,
+    .fa-reorder:before,
+    .fa-bars:before {
+        display: block;
+    }
+
+    #sidebar {
+        width: 30em;
+    }
+
+    .product img {
+        margin: 10px 0px 10px 0px;
+        padding-right: 10px;
+    }
+
+    #to-top {
+        opacity: .5;
+    }
+
+
+    footer {
+        line-height: 1.2;
+        border-bottom: 1px solid wheat;
+    }
+
+    footer p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .fin {
+        height: 70px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+}

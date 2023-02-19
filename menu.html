@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./jq/jquery-3.6.3.js" ></script>
+</head>
+<body>
+    <nav class="top">
+        <i class="fa fa-bars " aria-hidden="true"  id="abc" onclick="openMenu()"></i>
+        <a href="./index.html">
+            <img src="./img/Index/Component 1.png" alt=""></a>
+        <ul class="flex-nav menu">
+            <li><a href="./page1.html">帳篷目錄</a></li>
+            <li><a href="./recommend.html">一日推薦</a></li>
+            <li><a href="./menu.html">商品租借</a></li>
+            <li><a href="./qa.html">常見問題</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./order.html">線上預約</a></li>
+        </ul>
+    </nav>
+    <div id="content-container">
+        <img src="./img/camping-checklist-lg1.jpg" alt="" id="banner">
+        <div id="content">
+            <div id="sidebar">
+                <ul id="sidebar_ul">
+                    
+                    <li>商品購買</li>
+                    <li onclick="openCity(event,'product1')" class="btn_choice" id="id1 " >睡具</li>
+               
+                    <li onclick="openCity(event,'product2')" class="btn_choice" id="id2">雨具</li>
+                    <li onclick="openCity(event,'product3')"  class="btn_choice" id="id3">杯具</li>
+                    <li onclick="openCity(event,'product4')" class="btn_choice" id="id4">椅具</li>
+                </ul>
+            </div>
+            <div id="main">
+                <div id="products">
+                    
+                    <div class="product id_1 product1" id="product1" >
+                       
+                        <div class="spacing"></div>
+                        <img src="./img/four.jpg" alt="">
+                        <div class="product-name">睡袋</div>
+                        <div class="price">$2000</div>
+                        <div><button>查看規格</button></div>
+                    </div>
+                    <div class="product id_4 product4" id="product4">
+                       
+                        <div class="spacing"></div>
+                        <img src="./img/20200818174534209_2.JPG" alt="">
+                        <div class="product-name">露營椅</div>
+                        <div class="price">$2000</div>
+                        <div><button>查看規格</button></div>
+                    </div>
+                    <div class="product id_2 product2" id="product2">
+                        
+                        <div class="spacing"></div>
+                        <img src="./img/五.jpg" alt="">
+                        <div class="product-name">雨衣</div>
+                        <div class="price">$2000</div>
+                        <div><button>查看規格</button></div>
+                    </div>
+                    <div class="product id_3 product3" id="product3">
+                        
+                        <div class="spacing"></div>
+                        <img src="./img/1657529883.jpg" alt="">
+                        <div class="product-name">馬克杯</div>
+                        <div class="price">$2000</div>
+                        <div><button>查看規格</button></div>
+                    </div>
+                    <div class="product id_1 product1" id="product1">
+                        
+                        <div class="spacing"></div>
+                        <div class="electric"> <img src="./img/seven.jpg" alt=""></div>
+                        <div class="product-name">電暖爐</div>
+                        <div class="price price1">$2000</div>
+                        <div><button class="electric_btn">查看規格</button></div>
+                    </div>
+                    <div class="product id_1 product1" id="product1">
+                        
+                        <div class="spacing"></div>
+                        <img src="./img/three.jpg" alt="">
+                        <div class="product-name">枕頭</div>
+                        <div class="price">$2000</div>
+                        <div><button>查看規格</button></div>
+                    </div>
+                </div>
+                <div id="more"> <button class="btn"> 查看更多</button></div>
+            </div>
+        </div>
+        <a href="#">
+            <div id="to-top">
+                <img src="./img/up-arrow.png" alt="">
+            </div>
+        </a>
+    </div>
+    <footer>
+        <p>電話: (02)-1234-5678</p>
+        <p>地址:新竹市湖口區三民路樂康街400號</p>
+        <p>Email:ga3005043857@gmail.com</p>
+    </footer>
+    <div class="fin">
+        <p> 本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。參考資源: WILD KIDS LIFE</p>
+    </div>
+
+    <script>
+    
+        function openCity(evt, setName) {
+        
+            let i, product, btn_choice;
+
+
+            product = document.getElementsByClassName("product");
+            for (i = 0; i < product.length; i++) {
+                // console.log(product[i]);
+                product[i].style.display = "none";
+                // console.log(product[i]);
+            }
+                if(setName === 'product1'){
+                     document.getElementsByClassName(setName)[0].style.display = 'block';
+                    document.getElementsByClassName(setName)[1].style.display = 'block';
+                    document.getElementsByClassName(setName)[2].style.display = 'block';
+                }else {
+                    document.getElementById(setName).style.display = "block";
+                }
+            }
+
+        //漢堡
+ 
+        let open = 0 ;
+            function openMenu(){
+
+            
+        //    console.log(open);
+            if(open == 0){
+                $(".top .menu").css("left", "-47px")
+                open = 1;
+                
+            }else{
+                $(".top .menu").css("left", "-500px")
+                open = 0;
+            }
+            // console.log(openMenu());
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

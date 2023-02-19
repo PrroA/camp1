@@ -1,0 +1,390 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(../img/fff.jpg);
+}
+
+/* 最上方的導覽列 */
+
+.top {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    border-bottom: 2px solid black;
+    z-index: 10;
+}
+
+.top>.fa {
+    display: none;
+}
+
+/* .top > .fa:hover ~ ul{
+    left: 0;
+  } */
+
+
+
+.top img {
+    margin-top: 20px;
+    height: 50px;
+    padding-bottom: 5px;
+
+}
+
+
+nav ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    /* 移除項目符號 */
+
+
+}
+
+nav a {
+    color: inherit;
+    /* 移除超連結顏色 */
+    display: block;
+    /* 讓 <a> 填滿 <li> */
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+    /* 移除超連結底線 */
+    font-weight: 900;
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav li:hover {
+    background-color: rgb(255, 255, 255);
+    color: #cc5200;
+}
+
+.inline-block-nav {
+    text-align: center;
+    font-size: 0;
+    /* 移除 <li> 之間的空隙 */
+}
+
+.inline-block-nav>li {
+    display: inline-block;
+}
+
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+    display: none;
+}
+
+
+
+#banner {
+    width: 100%;
+    /* height: 300px; */
+    /* object-fit: contain; */
+}
+
+#title {
+    text-align: center;
+    display: block;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 50px;
+    margin-top: 10px;
+
+}
+
+#news-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#news-row>div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+#news-row img {
+    width: 100px;
+    border-radius: 50%;
+    transition: 1s;
+    height: 100px;
+}
+
+#news-row img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#news-row .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.news-block {
+    width: 100%;
+    display: flex;
+    height: 20em;
+    gap: 10%;
+    margin-top: 50px;
+}
+
+.news-block a {
+    text-decoration: none;
+}
+
+.col {
+    margin-top: 20px;
+}
+
+.news-block>img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: .6s;
+
+}
+
+.news-block>img:hover {
+    transform: scale(1.1);
+
+}
+
+.news-block>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 1.2em;
+}
+
+.news-block .title {
+    font-size: 1.5em;
+}
+
+.news-block .button {
+    background-color: #000000;
+    padding: 10px 15px;
+    border-radius: 2em;
+    color: azure;
+}
+
+#to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 0.75em;
+    background-color: #EFD9D9;
+    cursor: pointer;
+}
+
+#to-top img {
+    width: 100%;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    margin-top: 20px;
+    line-height: 1.6;
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    border-bottom: 2px solid red;
+}
+
+
+.fin {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px;
+}
+
+.fin p {
+    color: aliceblue;
+}
+
+#preloader {
+    /*   這是整個會蓋住畫面的底色色塊  */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+#status {
+    /*   這是中間loading的gif坐標css,我們盡量讓他畫面置中  */
+    position: fixed;
+    width: 218px;
+    height: 419px;
+    left: 50%;
+    top: 50%;
+}
+
+
+@media screen and (max-width: 414px) {
+    html {
+        width: 100%;
+    }
+
+    body {
+        width: 100%;
+        /* opacity: .5; */
+    }
+
+    .top {
+        width: 414px;
+
+    }
+
+
+    .top nav ul {
+        width: 414px;
+    }
+
+    .top .menu {
+        display: block;
+        position: fixed;
+        left: -500px;
+        top: 94px;
+        width: 100vw;
+        /* height: calc(100vh - 60px); */
+        background-color: #6bcb42;
+        z-index: 10;
+        order: 2;
+        transition: .5s;
+        opacity: .9;
+        border: 1px solid black;
+    }
+
+    .top>.fa:hover~ul {
+        left: -40px;
+        /* display: block; */
+        /* border: 1px solid black; */
+    }
+
+    .top .fa .fa-bars {
+        float: left;
+        /* display: block; */
+    }
+
+    .top .menu li {
+        margin-right: 0;
+        border: 1px solid black;
+    }
+
+    .top .menu li:last-child {
+        border-bottom: 1px solid #991515;
+    }
+
+    .top .menu a {
+        line-height: 60px;
+        padding-left: 50px;
+    }
+
+    nav a {
+        margin-left: 150px;
+    }
+
+    .fa-navicon:before,
+    .fa-reorder:before,
+    .fa-bars:before {
+        display: block;
+    }
+
+    .fa-navicon:before,
+    .fa-reorder:before,
+    .fa-bars:before {
+        content: "\f0c9";
+    }
+
+    .top>.fa {
+        display: block;
+    }
+
+    #banner {
+        width: 100%;
+        /* overflow: hidden; */
+        height: 320px;
+        object-fit: contain;
+        /* padding-bottom: 100px; */
+    }
+
+    .news-block>img {
+        border-radius: 0;
+        height: 250px;
+        padding-left: 20px;
+        border-radius: 20px;
+    }
+
+    #to-top {
+        opacity: .5;
+    }
+
+
+    footer {
+        line-height: 1.2;
+        border-bottom: 1px solid wheat;
+    }
+
+    footer p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .fin {
+        height: 70px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #status {
+        /*   這是中間loading的gif坐標css,我們盡量讓他畫面置中  */
+        position: fixed;
+        width: 218px;
+        height: 419px;
+        /* left: 50%;
+        top: 50%; */
+    }
+    
+}

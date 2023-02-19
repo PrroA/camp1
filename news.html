@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/news.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./jq/jquery-3.6.3.js" ></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div id="status"><img src="./img/load.gif"/></div>
+    </div>
+    <nav class="top">
+        <i class="fa fa-bars " aria-hidden="true"  id="abc" onclick="openMenu()"></i>
+        <a href="./index.html">
+            <img src="./img/Index/Component 1.png" alt=""></a>
+        <ul class="flex-nav menu">
+            <li><a href="./page1.html">帳篷目錄</a></li>
+            <li><a href="./recommend.html">一日推薦</a></li>
+            <li><a href="./menu.html">商品租借</a></li>
+            <li><a href="./qa.html">常見問題</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./order.html">線上預約</a></li>
+        </ul>
+    </nav>
+
+    
+    <div id="content-container">
+        <div data-aos="flip-up"
+        data-aos-duration="1500">
+        <img src="./img/wpicon_img_23850.jpg" alt="" id="banner">
+        <div id="main-container">
+            <h1 id="title">這裡即將顯示最新新聞<br>不時也會有優惠即時消息</h1>
+            <div id="news-row">
+                <div>
+                    <img src="./img/unnamed.webp" alt="">
+                    <div class="title">限時優惠</div>
+                    <div class="content">
+                        即日起,限時優惠<br>
+                        全館販賣物65折
+                    </div>
+
+                </div>
+                <div> <div class="ttt"> <img src="./img/ttt.jpg" alt=""></div> 
+                   
+                    <div class="title">颱風警報</div>
+                    <div class="content">
+                        即日起7/1～7/29號
+                        本營區暫停營業
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/vedfolnir-qrcode-1200x1200.jpg" alt="">
+                    <div class="title">掃描QR Code</div>
+                    <div class="content">
+                        掃描QR Code
+                        領取優惠碼
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="news-block">
+                <img src="./img/sixed.jpg" alt="">
+                <div data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500">
+                    <div class="title">開放投影幕</div>
+                    <div class="content">
+                        可與身邊的人一邊享受露營<br>
+                        順便一起團體享受前所未有的<br>
+                        視聴饗宴。
+                    </div>
+                    <a href="./order.html"><div class= "button">立即預約</div></a>
+                </div>
+            </div>
+            <div class="news-block col">
+
+                <img src="./img/Ons-Kamp-Vintage-Collection.jpg" alt="">
+                <div data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="2000">
+                    <div class="title">及時小物</div>
+                    <div class="content">
+                        忘記帶沒關係<br>
+                        現在商店.不時有你沒準備好<br>
+                        的物品這裡應有盡有<br>
+                        讓你的露營時光缺少麻煩
+                    </div>
+                    <a href="./menu.html"><div class="button">來去購物</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+        <a href="#">
+            <div id="to-top">
+                <img src="./img/up-arrow.png" alt="">
+            </div>
+        </a>
+    <footer>
+        <p>電話: (02)-1234-5678</p>
+        <p>地址:新竹市湖口區三民路樂康街400號</p>
+        <p>Email:ga3005043857@gmail.com</p>
+    </footer>
+    <div class="fin">
+        <p> 本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。參考資源: WILD KIDS LIFE</p>
+    </div>
+
+     <script>
+         AOS.init();
+        var zd = document.getElementById("to-top");
+        // 綁定點擊事件
+            zd.addEventListener("click", function() {
+        let time = setInterval(function() {
+        let top = pageYOffset;
+        let step = Math.ceil(top/50);
+        window.scroll(0, top-step);
+        if(top==0) {
+            clearInterval(time);
+        }
+    }, 10)
+})
+
+let open = 0 ;
+            function openMenu(){
+
+            
+        //    console.log(open);
+            if(open == 0){
+                $(".top .menu").css("left", "-47px")
+                open = 1;
+                
+            }else{
+                $(".top .menu").css("left", "-500px")
+                open = 0;
+            }
+            // console.log(openMenu());
+        }
+    </script>
+    <script>
+        AOS.init();
+      </script>
+
+
+<script>
+$(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+    $("#status").delay(5000).fadeOut(3000); //delay --> 延遲幾秒才fadeOut
+    $("#preloader").delay(7000).fadeOut(3000);
+})
+</script>
+</body>
+</html>

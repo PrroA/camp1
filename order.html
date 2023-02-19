@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="stylesheet/order.css">
+    <script src="./jq/jquery-3.6.3.js" ></script>
+   
+</head>
+
+<body>
+    <nav class="top">
+        <i class="fa fa-bars " aria-hidden="true"  id="abc" onclick="openMenu()"></i>
+        <a href="./index.html">
+            <img src="./img/Index/Component 1.png" alt=""></a>
+        <ul class="flex-nav menu">
+            <li><a href="./page1.html">帳篷目錄</a></li>
+            <li><a href="./recommend.html">一日推薦</a></li>
+            <li><a href="./menu.html">商品租借</a></li>
+            <li><a href="./qa.html">常見問題</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./order.html">線上預約</a></li>
+        </ul>
+    </nav>
+
+    <div class="bar"></div>
+    <div id="container">
+        <h2>線上預約</h2>
+        <div class="title">01.預約日期</div>
+        <hr>
+        <div id="date">
+            <div>選擇入住日期: <input type="date"></div>
+            <div>選擇退租日期: <input type="date"></div>
+        </div>
+        <div class="title">02.入住資料</div>
+        <hr>
+        <div class="text">姓名 <input type="text" placeholder="請輸入姓名"></div>
+        <div class="text">電話 <input type="text" placeholder="請輸入電話"></div>
+        <div class="text">信箱 <input type="text" placeholder="請輸入信箱"></div>
+        <div class="text">備註留言 </div>
+        <textarea cols="30" rows="10" placeholder="留下您的寶貴意見"></textarea>
+        <div class="title">03.預約資料</div>
+        <hr>
+        <div id="people">
+            <div class="text">成人 <input type="number" id="number" min="1" max="10"></div>
+            <div class="text">小孩 <input type="number" id="number" min="1" max="10"> </div>
+        </div>
+        <div id="rent">
+            <div>租借商品</div>
+            <div>
+            <table>
+                <tr>
+                    <td><div>
+                        <input type="checkbox" id="horns1" name="horns1">
+                        <label for="horns1">電暖爐</label>
+                      </div></td>
+                    <td><div>
+                        <input type="checkbox" id="horns2" name="horns2">
+                        <label for="horns2">枕頭</label>
+                      </div></td>
+                    <td><div>
+                        <input type="checkbox" id="horns3" name="horns3">
+                        <label for="horns3">露營椅</label>
+                      </div></td>
+                </tr>
+                <tr>
+                    <td><div>
+                        <input type="checkbox" id="horns4" name="horns4">
+                        <label for="horns4">雨衣</label>
+                      </div></td>
+                    <td><div>
+                        <input type="checkbox" id="horns5" name="horns5">
+                        <label for="horns5">馬克杯</label>
+                      </div></td>
+                    <td><div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">睡袋</label>
+                      </div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        <div class="btn">
+            <button>送出表單</button>
+        </div>
+
+
+    <a href="#">
+        <div id="to-top">
+            <img src="./img/up-arrow.png" alt="">
+        </div>
+    </a>
+    <footer>
+        <p>電話: (02)-1234-5678</p>
+        <p>地址:新竹市湖口區三民路樂康街400號</p>
+        <p>Email:ga3005043857@gmail.com</p>
+    </footer>
+    <div class="fin">
+        <p> 本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。參考資源: WILD KIDS LIFE</p>
+    </div>
+    <script>
+        document.getElementById("number").addEventListener("input",function(event){
+           event.target.value = event.target.value.replace(/\-/g,""); 
+        });
+
+
+
+// 網頁進度條
+        window.addEventListener('scroll', () => {
+            moveBar('#e74c3c')
+})
+
+// main code
+
+// 網頁進度條
+function moveBar(color = '#0984e3') {
+  let bar = document.querySelector('.bar')
+  let w =
+    Math.ceil((Math.round(window.pageYOffset) /
+      (document.body.scrollHeight - window.innerHeight)) *
+    100)
+  bar.style.width = w + '%'
+  bar.style.background = color
+}   
+    $('.fa fa-bars').on('click', function(e){
+            e.preventDefault();
+    $('body').toggleClass('fa fa-bars');
+});
+
+let open = 0 ;
+            function openMenu(){
+
+            
+        //    console.log(open);
+            if(open == 0){
+                $(".top .menu").css("left", "-47px")
+                open = 1;
+                
+            }else{
+                $(".top .menu").css("left", "-500px")
+                open = 0;
+            }
+            // console.log(openMenu());
+        }
+
+    </script> 
+    
+</body>
+
+</html>
+
+
